@@ -237,6 +237,34 @@
     color:var(--olive-deep);
   }
 
+
+  /* item photos — miniatura à direita; o zoom leve recorta eventuais bordas brancas da foto */
+  .item:has(.item-photo){
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 92px;
+    column-gap:14px;
+    align-items:start;
+  }
+  .item:has(.item-photo) > *{grid-column:1;}
+  .item:has(.item-photo) > .item-photo{
+    grid-column:2;
+    grid-row:1 / span 3;
+    width:92px;
+    height:92px;
+    border-radius:10px;
+    overflow:hidden;
+    background:var(--olive-mist);
+    display:block;
+  }
+  .item-photo img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border:0;
+    transform:scale(1.14);
+  }
+
   .subgroup-label{
     font-size:12px;
     font-weight:600;
@@ -425,6 +453,7 @@
     <h2>Massas</h2>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/6feaeaa46d7f5e4c9b4ea97f3d5b3b3a" alt="Nhoque ao Sugo" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Nhoque ao Sugo</span></div>
       <p class="item-desc">Nhoque artesanal com molho de tomate preparado lentamente e finalização especial da casa.</p>
       <div class="item-sizes">
@@ -433,6 +462,7 @@
     </div>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/3d4d3c927de4e9e3c7bdb00df2b7bd54" alt="Nhoque à Bolonhesa" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Nhoque à Bolonhesa</span></div>
       <p class="item-desc">Nhoque artesanal acompanhado por molho bolonhesa encorpado e saboroso.</p>
       <div class="item-sizes">
@@ -441,6 +471,7 @@
     </div>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/31e350ad8f18d6887a4bd24d70a620ec" alt="Nhoque ao Sugo com Mignon" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Nhoque ao Sugo com Mignon</span></div>
       <p class="item-desc">Nhoque artesanal com molho de tomate preparado lentamente e mignon.</p>
       <div class="item-sizes">
@@ -449,6 +480,7 @@
     </div>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/764d64c1099fafd5dacb2d358d5082b6" alt="Fettuccine Alfredo c/ Mignon" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Fettuccine Alfredo c/ Mignon</span></div>
       <p class="item-desc">Fettuccine envolvido em cremoso molho Alfredo, com espinafre e tomates cereja, finalizado com parmesão e acompanhado de filé-mignon grelhado.</p>
       <div class="item-sizes">
@@ -457,6 +489,7 @@
     </div>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/8a33f2246d4c1031ac60d8adc54094b8" alt="Fettuccine Alfredo c/ Frango" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Fettuccine Alfredo c/ Frango</span></div>
       <p class="item-desc">Fettuccine envolvido em cremoso molho Alfredo, com espinafre e tomates cereja, finalizado com parmesão e acompanhado de peito de frango grelhado.</p>
       <div class="item-sizes">
@@ -465,6 +498,7 @@
     </div>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/ef4fba0fabb51aa15c2b23c9d7213ece" alt="Fettuccine à Bolonhesa" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Fettuccine à Bolonhesa</span></div>
       <p class="item-desc">Massa fettuccine com molho bolonhesa encorpado, tomate e manjericão.</p>
       <div class="item-sizes">
@@ -473,6 +507,7 @@
     </div>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/a31e857458010d1211d889a16df47ed1" alt="Fettuccine com Camarão ao Molho de Limão Siciliano" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Fettuccine com Camarão ao Molho de Limão Siciliano</span></div>
       <p class="item-desc">Fettuccine ao molho cremoso de limão siciliano com camarões selecionados, finalizado com parmesão, raspas de limão e manjericão fresco.</p>
       <div class="item-sizes">
@@ -495,6 +530,7 @@
     <h2>Risotos</h2>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/b94cd0c1e40e8413c8f3b4012a54848f" alt="Risoto de Camarão" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Risoto de Camarão</span></div>
       <p class="item-desc">Arroz arbóreo ao vinho branco, camarões salteados, tomate e parmesão, finalizado na manteiga.</p>
       <div class="item-sizes">
@@ -503,6 +539,7 @@
     </div>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/49e5e965a62306feca4bf9eb474bffaf" alt="Risoto de Mignon" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Risoto de Mignon</span></div>
       <p class="item-desc">Arroz arbóreo com textura aveludada, filé-mignon suculento, toque de parmesão e vinho branco, finalizado com manteiga derretida.</p>
       <div class="item-sizes">
@@ -525,6 +562,7 @@
     <h2>Carnes &amp; Pratos Principais</h2>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/c4db94131fa7c02ffe8e5033012b78f2" alt="Strogonoff de Mignon" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Strogonoff de Mignon</span></div>
       <p class="item-desc">Acompanha arroz branco e batata palha.</p>
       <div class="item-sizes">
@@ -533,6 +571,7 @@
     </div>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/cfc96fa0fb9bec593863b7f46e4628b6" alt="Filé ao Molho Madeira" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Filé ao Molho Madeira</span></div>
       <p class="item-desc">Filé mignon ao molho madeira, acompanha aligot e arroz branco.</p>
       <div class="item-sizes">
@@ -541,6 +580,7 @@
     </div>
 
     <div class="item">
+      <span class="item-photo"><img src="https://images.brendi.com.br/optimized/ce4966427210336a508cb6bea8d37f39" alt="Strogonoff de Camarão" loading="lazy" decoding="async"></span>
       <div class="item-top"><span class="item-name">Strogonoff de Camarão</span></div>
       <p class="item-desc">Acompanha arroz branco e batata palha.</p>
       <div class="item-sizes">
